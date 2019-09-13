@@ -1,0 +1,251 @@
+/*--------------------------------------------------------------
+>>> TABLE OF CONTENTS BASE CSS Documentation:
+----------------------------------------------------------------
+1.0 Color Base
+	1.1 Font Color
+  1.2 Social Color
+  1.3 Gradient
+2.0 Font
+3.0 Media Query
+  3.1 Grid
+4.0 Animation
+  4.1 Scale
+  4.2 Position
+5.0 Utilities
+  5.1 Border
+  5.2 Box-Shadow
+  3
+  5.2 Clearing
+
+--------------------------------------------------------------*/
+
+// 1.0 Color Base
+$white: #ffffff;
+$lightwhite: #c1c0c0;
+$black: #000000;
+$lightblack: #5a5a5a;
+$green: #97b63d;
+$lightgreen: #afe800;
+$navy: #1a2a55;
+$purple: #673ab7;
+$brown: #985a26;
+$grey: #cccccc;
+$lightgrey: #f3f3f3;
+$lightblue: #4c57bd;
+$blue: #2b3594;
+$blue_solid: #303f9f;
+$lightorange: #f2a900;
+$orange: #ee6d06;
+$orange_solid: #d14926;
+$tosca: #00bfa5;
+$tosca_solid: #0097a7;
+$red: #ec2028;
+$red_solid: #bc2b30;
+$yellow: #fdd913;
+$yellow_solid: #e59a04;
+$gold: #c09f25;
+$bg_base: #fff;
+$bg_1: #4c8ae7;
+$bg_none: none !important;
+// 1.1 Font Color
+$cl_primary: #313131;
+$cl_white: #fff;
+$cl_red: red;
+$cl_1: #fcc645;
+$cl_2: #02445e;
+// 1.2 Social Color
+$cl_fb: #3b5998;
+$cl_tw: #4099ff;
+$cl_gp: #d34836;
+$cl_wa: #43d854;
+//1.3 Gradient Color
+@mixin bg-gradient-black {
+    background: rgba(0, 0, 0, 0);
+    background: -moz-linear-gradient( top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.6) 37%, rgba(0, 0, 0, 0.66) 47%, rgba(0, 0, 0, 1) 100%);
+    background: -webkit-gradient( left top, left bottom, color-stop(0%, rgba(0, 0, 0, 0)), color-stop(37%, rgba(0, 0, 0, 0.6)), color-stop(47%, rgba(0, 0, 0, 0.66)), color-stop(100%, rgba(0, 0, 0, 1)));
+    background: -webkit-linear-gradient( top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.6) 37%, rgba(0, 0, 0, 0.66) 47%, rgba(0, 0, 0, 1) 100%);
+    background: -o-linear-gradient( top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.6) 37%, rgba(0, 0, 0, 0.66) 47%, rgba(0, 0, 0, 1) 100%);
+    background: -ms-linear-gradient( top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.6) 37%, rgba(0, 0, 0, 0.66) 47%, rgba(0, 0, 0, 1) 100%);
+    background: linear-gradient( to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.6) 37%, rgba(0, 0, 0, 0.66) 47%, rgba(0, 0, 0, 1) 100%);
+    // filter: progid: DXImageTransform.Microsoft.gradient( startColorstr='#000000', endColorstr='#000000', GradientType=0);
+}
+
+@mixin bg-black {
+    background: rgba(0, 0, 0, 0.5);
+}
+
+@mixin bg-gradient-yellow {
+    background: rgba(255, 208, 0, 0);
+    background: -moz-linear-gradient( top, rgba(255, 208, 0, 0) 0%, rgba(255, 208, 0, 0.31) 52%, rgba(255, 208, 0, 0.32) 53%, rgba(255, 210, 0, 1) 100%);
+    background: -webkit-gradient( left top, left bottom, color-stop(0%, rgba(255, 208, 0, 0)), color-stop(52%, rgba(255, 208, 0, 0.31)), color-stop(53%, rgba(255, 208, 0, 0.32)), color-stop(100%, rgba(255, 210, 0, 1)));
+    background: -webkit-linear-gradient( top, rgba(255, 208, 0, 0) 0%, rgba(255, 208, 0, 0.31) 52%, rgba(255, 208, 0, 0.32) 53%, rgba(255, 210, 0, 1) 100%);
+    background: -o-linear-gradient( top, rgba(255, 208, 0, 0) 0%, rgba(255, 208, 0, 0.31) 52%, rgba(255, 208, 0, 0.32) 53%, rgba(255, 210, 0, 1) 100%);
+    background: -ms-linear-gradient( top, rgba(255, 208, 0, 0) 0%, rgba(255, 208, 0, 0.31) 52%, rgba(255, 208, 0, 0.32) 53%, rgba(255, 210, 0, 1) 100%);
+    background: linear-gradient( to bottom, rgba(255, 208, 0, 0) 0%, rgba(255, 208, 0, 0.31) 52%, rgba(255, 208, 0, 0.32) 53%, rgba(255, 210, 0, 1) 100%);
+    // filter: progid: DXImageTransform.Microsoft.gradient( startColorstr='#ffd000', endColorstr='#ffd200', GradientType=0);
+}
+
+@mixin bg-gradient-yellow2 {
+    background: rgba(255, 210, 0, 1);
+    background: -moz-linear-gradient( top, rgba(255, 210, 0, 1) 0%, rgba(241, 231, 103, 0) 100%);
+    background: -webkit-gradient( left top, left bottom, color-stop(0%, rgba(255, 210, 0, 1)), color-stop(100%, rgba(241, 231, 103, 0)));
+    background: -webkit-linear-gradient( top, rgba(255, 210, 0, 1) 0%, rgba(241, 231, 103, 0) 100%);
+    background: -o-linear-gradient( top, rgba(255, 210, 0, 1) 0%, rgba(241, 231, 103, 0) 100%);
+    background: -ms-linear-gradient( top, rgba(255, 210, 0, 1) 0%, rgba(241, 231, 103, 0) 100%);
+    background: linear-gradient( to bottom, rgba(255, 210, 0, 1) 0%, rgba(241, 231, 103, 0) 100%);
+    // filter: progid: DXImageTransform.Microsoft.gradient( startColorstr='#ffd200', endColorstr='#f1e767', GradientType=0);
+}
+
+@mixin bg-radial-black {
+    background: rgba(255, 255, 255, 0);
+    background: -moz-radial-gradient( center, ellipse cover, rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 1) 100%);
+    background: -webkit-gradient( radial, center center, 0px, center center, 100%, color-stop(0%, rgba(255, 255, 255, 0)), color-stop(100%, rgba(0, 0, 0, 1)));
+    background: -webkit-radial-gradient( center, ellipse cover, rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 1) 100%);
+    background: -o-radial-gradient( center, ellipse cover, rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 1) 100%);
+    background: -ms-radial-gradient( center, ellipse cover, rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 1) 100%);
+    background: radial-gradient( ellipse at center, rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 1) 100%);
+    // filter: progid: DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#000000', GradientType=1);
+}
+
+// 2.0 Font
+$font_body: "Roboto",
+sans-serif;
+$font_1: "dinregular",
+sans-serif;
+$font_2: "djb_get_digitalregular";
+$font_3: "cheddar_jackregular";
+$font_icon: "icomoon";
+// 3.0 Media Query
+@mixin max-responsive($media) {
+    @media (max-width: $media) {
+        @content;
+    }
+}
+
+@mixin min-responsive($media) {
+    @media (min-width: $media) {
+        @content;
+    }
+}
+
+@mixin range-responsive($media, $media2) {
+    @media (min-width: $media) and (max-width: $media2) {
+        @content;
+    }
+}
+
+//3.1 Grid
+$xlg: 1500px;
+$lg: 1100px;
+$md: 992px;
+$sm: 768px;
+$xs: 360px;
+$xxs: 320px;
+// 4.0 Animation
+@mixin transition($t) {
+    -webkit-transition: all $t ease;
+    -moz-transition: all $t ease;
+    -ms-transition: all $t ease;
+    -o-transition: all $t ease;
+    transition: all $t ease;
+}
+
+@mixin base_transition($t) {
+    -webkit-transition: $t 0.2s ease;
+    -moz-transition: $t 0.2s ease;
+    -ms-transition: $t 0.2s ease;
+    -o-transition: $t 0.2s ease;
+    transition: $t 0.2s ease;
+}
+
+@mixin transition_slow($t) {
+    -webkit-transition: $t 0.4s ease;
+    -moz-transition: $t 0.4s ease;
+    -ms-transition: $t 0.4s ease;
+    -o-transition: $t 0.4s ease;
+    transition: $t 0.4s ease;
+}
+
+@mixin transition_superslow($t) {
+    -webkit-transition: $t 4s ease;
+    -moz-transition: $t 4s ease;
+    -ms-transition: $t 4s ease;
+    -o-transition: $t 4s ease;
+    transition: $t 4s ease;
+}
+
+// 4.1 Scale
+@mixin base_scale($x) {
+    -ms-transform: scale($x);
+    -webkit-transform: scale($x);
+    transform: scale($x);
+}
+
+// 4.2 Position
+@mixin base_position($p) {
+    -ms-transform: translate($p);
+    -webkit-transform: translate($p);
+    transform: translate($p);
+}
+
+@mixin base_position_y($y) {
+    -ms-transform: translateY($y);
+    -webkit-transform: translateY($y);
+    transform: translateY($y);
+}
+
+// 5.0 Utilities
+// 5.1 Border Radius
+@mixin border_radius($x) {
+    -webkit-border-radius: $x;
+    -moz-border-radius: $x;
+    -ms-border-radius: $x;
+    -o-border-radius: $x;
+    border-radius: $x;
+}
+
+// 5.2 Box Shadow
+@mixin box_shadow {
+    -webkit-box-shadow: 0px 0px 10px 2px rgba(71, 69, 71, 1);
+    -moz-box-shadow: 0px 0px 10px 2px rgba(71, 69, 71, 1);
+    -o-box-shadow: 0px 0px 10px 2px rgba(71, 69, 71, 1);
+    box-shadow: 0px 0px 10px 2px rgba(71, 69, 71, 1);
+}
+
+@mixin box_shadow_bottom {
+    -webkit-box-shadow: 0px 4px 13px 0px rgba(0, 0, 0, 0.15);
+    -moz-box-shadow: 0px 4px 13px 0px rgba(0, 0, 0, 0.15);
+    box-shadow: 0px 4px 13px 0px rgba(0, 0, 0, 0.15);
+}
+
+@mixin box_shadow_white {
+    -webkit-box-shadow: 0px 0px 10px 1px #e8e8e8;
+    -moz-box-shadow: 0px 0px 10px 1px #e8e8e8;
+    -o-box-shadow: 0px 0px 10px 1px #e8e8e8;
+    box-shadow: 0px 0px 10px 1px #e8e8e8;
+}
+
+// 5.3 Clearing
+@mixin clearfix() {
+    &::after {
+        display: block;
+        content: "";
+        clear: both;
+    }
+}
+
+// 5.4 Parallax
+@mixin parallax {
+    width: 100%;
+    position: absolute;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    top: 0;
+    background-attachment: fixed;
+}
+
+@mixin display_full {
+    width: 100%;
+    height: 100%;
+}

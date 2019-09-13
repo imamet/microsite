@@ -1,0 +1,983 @@
+/*--------------------------------------------------------------
+>>> TABLE OF CONTENTS Utilities CSS Documentation:
+----------------------------------------------------------------
+1.0 Clearing
+2.0 Margin Padding
+3.0 Centering Layout
+4.0 Component
+  4.1 Button
+  4.2 Font
+  4.3 Modal Popup
+  4.4 Back to Top
+  4.5 Social Share
+5.0 Utilities
+  5.1 Gradient
+--------------------------------------------------------------*/
+
+// 1.0 Clearing
+.clearfix:after,
+.clearfix:before,
+.row:after,
+.row:before {
+    display: table;
+    content: "";
+    line-height: 0;
+}
+
+.clearfix:after,
+.row:after {
+    clear: both;
+}
+
+// 2.0 Margin Padding
+.mt1 {
+    margin-top: 10px!important
+}
+
+.mb1 {
+    margin-bottom: 10px!important
+}
+
+.mr1 {
+    margin-right: 10px!important
+}
+
+.ml1 {
+    margin-left: 10px!important
+}
+
+.pt1 {
+    padding-top: 10px!important
+}
+
+.pb1 {
+    padding-bottom: 10px!important
+}
+
+.pr1 {
+    padding-right: 10px!important
+}
+
+.pl1 {
+    padding-left: 10px!important
+}
+
+.mt2 {
+    margin-top: 20px!important
+}
+
+.mt3 {
+    margin-top: 30px!important
+}
+
+.mt4 {
+    margin-top: 40px!important
+}
+
+.mb2 {
+    margin-bottom: 20px!important
+}
+
+.mb4 {
+    margin-bottom: 40px!important
+}
+
+.mr2 {
+    margin-right: 20px!important
+}
+
+.ml2 {
+    margin-left: 20px!important
+}
+
+.pt2 {
+    padding-top: 20px!important
+}
+
+.pb2 {
+    padding-bottom: 20px!important
+}
+
+.pr2 {
+    padding-right: 20px!important
+}
+
+.pl2 {
+    padding-left: 20px!important
+}
+
+// 3.0 Centering 
+.flex__wrap {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+}
+
+.centerElement {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-align-content: center;
+    -ms-flex-line-pack: center;
+    align-content: center;
+    width: 100%;
+    height: 100%;
+}
+
+.display-table {
+    display: table;
+    @include display_full();
+    position: relative;
+    z-index: 1;
+}
+
+.display-center {
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+    @include display_full();
+}
+
+.center {
+    float: none !important;
+    margin: 0 auto !important;
+    text-align: center;
+}
+
+.center-block {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    float: none;
+    text-align: center;
+}
+
+// 4.0 Component 
+// 4.1 Button
+.btn {
+    @include transition(0.3s);
+}
+
+.btn-blue {
+    background: $blue;
+    color: $white;
+    padding: 6px 10px;
+    &:hover,
+    &:focus {
+        background: $lightblue;
+        color: $white;
+    }
+}
+
+.btn-white {
+    background: 0 0;
+    border: 2px solid $white;
+    color: $white;
+    padding: 12px 35px;
+    border-radius: 0px;
+    text-transform: capitalize;
+    &:hover,
+    &:focus {
+        background: $white;
+        color: $black;
+        cursor: pointer;
+    }
+}
+
+.btn-big {
+    padding: 6px 25px;
+    letter-spacing: 5px;
+    font-weight: 600;
+}
+
+.btn-small {
+    padding: 4px 20px;
+}
+
+a {
+    @include base_transition(all);
+}
+
+// 4.2 Font Text
+.text {
+    font-size: 19px;
+    color: $white;
+    @include max-responsive($sm) {
+        font-size: 16px;
+    }
+    &--white {
+        color: $white;
+    }
+    &--black {
+        color: $black;
+    }
+    &--bigger {
+        font-size: 25px;
+    }
+    &--smaller {
+        font-size: 12px;
+    }
+    &--bold {
+        font-weight: bold;
+    }
+    &--title {
+        font-size: 25px;
+        font-weight: bold;
+    }
+}
+
+.text-center {
+    text-align: center !important
+}
+
+.text-right {
+    text-align: right !important
+}
+
+.text-left {
+    text-align: left !important
+}
+
+// 4.3 Modal Popup
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
+}
+
+.sr-only-focusable:active,
+.sr-only-focusable:focus {
+    position: static;
+    width: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    clip: auto;
+}
+
+[role="button"] {
+    cursor: pointer;
+}
+
+.modal-open {
+    overflow: hidden;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    border: 1px solid #fff;
+    padding-top: 100px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.4);
+    @-webkit-keyframes animatetop {
+        from {
+            top: -300px;
+            opacity: 0
+        }
+        to {
+            top: 0;
+            opacity: 1
+        }
+    }
+    @keyframes animatetop {
+        from {
+            top: -300px;
+            opacity: 0
+        }
+        to {
+            top: 0;
+            opacity: 1
+        }
+    }
+    &__title {
+        margin-top: 50px;
+        p {
+            font-size: 50px;
+            font-weight: 700;
+        }
+    }
+    &__content {
+        position: relative;
+        background-color: #0d5cab;
+        color: #fff;
+        margin: auto;
+        padding: 0;
+        border: 1px solid #888;
+        width: 50%;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        -webkit-animation-name: animatetop;
+        -webkit-animation-duration: 0.4s;
+        animation-name: animatetop;
+        animation-duration: 0.4s;
+        @include max-responsive($sm) {
+            width: 97%;
+        }
+    }
+    &__header {
+        padding: 2px 40px;
+        background-color: #0d5cab;
+        color: white;
+    }
+    &__body {
+        padding: 2px 40px;
+        @include max-responsive($sm) {
+            padding: 2px 0px;
+        }
+    }
+    &__close {
+        color: white;
+        float: right;
+        font-size: 40px;
+        margin-right: -27px;
+        margin-top: -6px;
+        &:hover,
+         :focus {
+            color: #000;
+            text-decoration: none;
+            cursor: pointer;
+        }
+    }
+    &__break {
+        border-bottom: 1px solid #fff;
+        margin: 20px auto;
+    }
+    &__form-style-2 {
+        button {
+            background: #2fa0d5;
+            color: #fff;
+            border-radius: 20px;
+            padding: 12px 22px;
+            border: none;
+            &:hover {
+                background: #FF8500;
+                color: #fff;
+            }
+            @include max-responsive($sm) {
+                padding: 10px 12px;
+            }
+        }
+        max-width: 100%;
+        padding: 20px 12px 10px 20px;
+        font-size: 13px;
+        .input-field,
+        .select-field {
+            box-sizing: border-box;
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            border: 1px solid #C2C2C2;
+            -webkit-border-radius: 3px;
+            -moz-border-radius: 3px;
+            padding: 10px;
+            outline: none;
+            border-radius: 26px;
+        }
+        .input-field1 {
+            box-sizing: border-box;
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            border: 1px solid #C2C2C2;
+            -webkit-border-radius: 3px;
+            -moz-border-radius: 3px;
+            padding: 10px;
+            outline: none;
+            margin: 25px 15px 25px 0;
+            border-radius: 26px;
+            width: 74%;
+            @include max-responsive($sm) {
+                width: 57%;
+            }
+        }
+        .textarea-field {
+            box-sizing: border-box;
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            border: 1px solid #C2C2C2;
+            -webkit-border-radius: 3px;
+            -moz-border-radius: 3px;
+            padding: 10px;
+            height: 105px;
+            outline: none;
+            outline-color: initial;
+            outline-style: none;
+            outline-width: initial;
+            border-radius: 15px;
+            width: 65%;
+            &:focus {
+                border: 1px solid #FF8500;
+            }
+        }
+        input {
+            width: 65%;
+            &:focus {
+                border: 1px solid #FF8500;
+            }
+            &[type=button] {
+                border: none;
+                padding: 8px 15px 8px 15px;
+                background: #2fa0d5;
+                color: #fff;
+                border-radius: 20px;
+                -webkit-border-radius: 3px;
+                -moz-border-radius: 3px;
+                &:hover {
+                    background: #FF8500;
+                    color: #fff;
+                }
+            }
+            &[type=submit] {
+                border: none;
+                padding: 8px 15px;
+                width: 100px;
+                background: #2fa0d5;
+                color: #fff;
+                border-radius: 23px;
+                -webkit-border-radius: 3px;
+                &:hover {
+                    background: #FF8500;
+                    color: #fff;
+                }
+            }
+        }
+        label {
+            display: block;
+            margin: 0px 0px 25px 0px;
+            span {
+                width: 33%;
+                font-weight: bold;
+                float: left;
+                padding-top: 8px;
+                padding-right: 5px;
+            }
+        }
+    }
+    .upload-btn-wrapper {
+        position: relative;
+        overflow: hidden;
+        display: inline-block;
+        top: 17px;
+    }
+    .upload-btn-wrapper input[type=file] {
+        font-size: 100px;
+        position: absolute;
+        left: 0;
+        top: 0;
+        opacity: 0;
+    }
+    .btn1 {
+        background: #2fa0d5;
+        color: #fff;
+        border-radius: 20px;
+        padding: 12px 22px;
+        border: none;
+    }
+}
+
+.modal1 {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    border: 1px solid #fff;
+    padding-top: 100px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.4);
+    @-webkit-keyframes animatetop {
+        from {
+            top: -300px;
+            opacity: 0
+        }
+        to {
+            top: 0;
+            opacity: 1
+        }
+    }
+    @keyframes animatetop {
+        from {
+            top: -300px;
+            opacity: 0
+        }
+        to {
+            top: 0;
+            opacity: 1
+        }
+    }
+    &__content {
+        position: relative;
+        background-color: #fff;
+        color: #fff;
+        margin: auto;
+        padding: 0;
+        border: 1px solid #888;
+        width: 40%;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        -webkit-animation-name: animatetop;
+        -webkit-animation-duration: 0.4s;
+        animation-name: animatetop;
+        animation-duration: 0.4s;
+        @include max-responsive($sm) {
+            width: 97%;
+        }
+    }
+    &__header {
+        // padding: 2px 40px;
+        background-color: #fff;
+    }
+    &__body {
+        // padding: 2px 40px;
+        @include max-responsive($sm) {
+            padding: 2px 0px;
+        }
+    }
+    &__close {
+        color: #2fa0d5;
+        float: right;
+        font-size: 26px;
+        margin-right: 10px;
+        margin-top: 0px;
+        @include max-responsive($sm) {
+            font-size: 50px;
+            position: absolute;
+            margin-top: -13px;
+            z-index: 1000;
+            left: 91%;
+        }
+        &:hover,
+         :focus {
+            color: #FF8500;
+            text-decoration: none;
+            cursor: pointer;
+        }
+    }
+    &__images {
+        img {
+            width: 100%;
+        }
+    }
+    &__tag {
+        width: 100%;
+        margin-left: -10px;
+        margin-top: -13px;
+        padding: 0 5px;
+        @include max-responsive($sm) {
+            width: 100%;
+            padding: 27px;
+        }
+        &--head {
+            width: 100%;
+            @include max-responsive($sm) {}
+        }
+        &--content {
+            margin-top: 13px;
+            p {
+                @include max-responsive($sm) {
+                    font-size: 20px;
+                }
+                color: #0d5cab;
+                font-weight: 520;
+                font-size: 13px;
+            }
+        }
+        &--author {
+            @include max-responsive($sm) {
+                font-size: 17px;
+                margin-top: 25px;
+            }
+            color: #000;
+            font-size: 10px;
+            margin-top: -9px;
+        }
+        &--kategori {
+            @include max-responsive($sm) {
+                font-size: 17px;
+                margin-top: -5px;
+            }
+            color: #000;
+            font-size: 10px;
+            margin-top: -15px;
+        }
+        &--icon {
+            color: #000;
+            font-size: 12px;
+            margin-top: 50%;
+            @include max-responsive($xlg) {
+                font-size: 12px;
+                margin-top: 4px;
+            }
+            @include max-responsive($sm) {
+                font-size: 22px;
+                margin-top: 22px;
+            }
+            ul {
+                float: right;
+                margin-bottom: 5px;
+                li {
+                    list-style: none;
+                    float: left;
+                    padding: 0 2px;
+                }
+            }
+        }
+    }
+}
+
+// .modal {
+//     display: none;
+//     overflow: hidden;
+//     position: fixed;
+//     top: 0;
+//     right: 0;
+//     bottom: 0;
+//     left: 0;
+//     z-index: 1050;
+//     -webkit-overflow-scrolling: touch;
+//     outline: 0;
+//     width: 50%;
+//     background-color: rgb(0, 0, 0);
+//     background-color: rgba(0, 0, 0, 0.4);
+// }
+// .modal.fade .modal-dialog {
+//   -webkit-transform: translate(0, -25%);
+//   -ms-transform: translate(0, -25%);
+//   -o-transform: translate(0, -25%);
+//   transform: translate(0, -25%);
+//   -webkit-transition: -webkit-transform 0.3s ease-out;
+//   -o-transition: -o-transform 0.3s ease-out;
+//   transition: transform 0.3s ease-out;
+// }
+// .modal.in .modal-dialog {
+//   -webkit-transform: translate(0, 0);
+//   -ms-transform: translate(0, 0);
+//   -o-transform: translate(0, 0);
+//   transform: translate(0, 0);
+// }
+// .modal-open .modal {
+//   overflow-x: hidden;
+//   overflow-y: auto;
+// }
+// .modal-dialog {
+//   position: relative;
+//   width: auto;
+//   margin: 10px;
+// }
+// .modal-content {
+//   position: relative;
+//   background-color: #ffffff;
+//   border: 1px solid #999999;
+//   border: 1px solid rgba(0, 0, 0, 0.2);
+//   border-radius: 6px;
+//   -webkit-box-shadow: 0 3px 9px rgba(0, 0, 0, 0.5);
+//   box-shadow: 0 3px 9px rgba(0, 0, 0, 0.5);
+//   -webkit-background-clip: padding-box;
+//           background-clip: padding-box;
+//   outline: 0;
+// }
+// .modal-backdrop {
+//   position: fixed;
+//   top: 0;
+//   right: 0;
+//   bottom: 0;
+//   left: 0;
+//   z-index: 1040;
+//   background-color: #000000;
+// }
+// .modal-backdrop.fade {
+//   opacity: 0;
+//   filter: alpha(opacity=0);
+// }
+// .modal-backdrop.in {
+//   opacity: 0.5;
+//   filter: alpha(opacity=50);
+// }
+// .modal-header {
+//   padding: 15px;
+//   border-bottom: 1px solid #e5e5e5;
+// }
+// .modal-header .close {
+//   margin-top: -2px;
+// }
+// .modal-title {
+//   margin: 0;
+//   line-height: 1.42857143;
+// }
+// .modal-body {
+//   position: relative;
+//   padding: 15px;
+// }
+// .modal-footer {
+//   padding: 15px;
+//   text-align: right;
+//   border-top: 1px solid #e5e5e5;
+// }
+// .modal-footer .btn + .btn {
+//   margin-left: 5px;
+//   margin-bottom: 0;
+// }
+// .modal-footer .btn-group .btn + .btn {
+//   margin-left: -1px;
+// }
+// .modal-footer .btn-block + .btn-block {
+//   margin-left: 0;
+// }
+.modal-scrollbar-measure {
+    position: absolute;
+    top: -9999px;
+    width: 50px;
+    height: 50px;
+    overflow: scroll;
+}
+
+@media (min-width: 768px) {
+    .modal-dialog {
+        width: 600px;
+        margin: 30px auto;
+    }
+    .modal-content {
+        -webkit-box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+    }
+    .modal-sm {
+        width: 300px;
+    }
+}
+
+@media (min-width: 992px) {
+    .modal-lg {
+        width: 900px;
+    }
+}
+
+.clearfix:before,
+.clearfix:after,
+.modal-header:before,
+.modal-header:after,
+.modal-footer:before,
+.modal-footer:after {
+    content: " ";
+    display: table;
+}
+
+.clearfix:after,
+.modal-header:after,
+.modal-footer:after {
+    clear: both;
+}
+
+// 4.4 Back to top
+.backtop {
+    position: fixed;
+    bottom: 10px;
+    right: 5px;
+    z-index: 9999;
+    opacity: 0;
+    @include transition(0.4s);
+    @include min-responsive($sm) {
+        bottom: 25px;
+        right: 15px;
+    }
+    span {
+        color: $white;
+        font-size: 11px;
+        text-align: center;
+        margin-bottom: 5px;
+        @include max-responsive($sm) {
+            display: none;
+        }
+    }
+    &__link {
+        margin: auto;
+        width: 36px;
+        height: 36px;
+        padding: 6px 8px;
+        background: $white;
+        border-radius: 30px;
+        color: #000;
+        border: 0px solid #000;
+        display: block;
+        box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3);
+        @include transition(0.4s);
+        &:hover {
+            background: $yellow;
+        }
+    }
+    &.show {
+        opacity: 1;
+    }
+}
+
+// 4.5 Social Share
+.social {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    z-index: 99;
+    @include max-responsive($sm) {
+        right: 0;
+        left: 0;
+        text-align: center;
+        margin: auto;
+        top: 5px;
+    }
+    &__item {
+        margin: 0px 5px;
+        img {
+            width: 25px;
+            @include max-responsive($sm) {
+                width: 20px;
+            }
+        }
+    }
+}
+
+// 5.0 Utilities 
+.invisible {
+    visibility: hidden;
+}
+
+.affix {
+    position: fixed;
+}
+
+.hidden {
+    display: none !important;
+}
+
+.italic {
+    font-style: italic;
+}
+
+.no-pad {
+    padding: 0px !important;
+}
+
+.container__full {
+    height: 100%;
+}
+
+.full__height {
+    height: 100vh !important;
+}
+
+@include min-responsive($xlg) {
+    .full__height__desktop {
+        height: 100vh !important;
+    }
+}
+
+.video-embed {
+    position: relative;
+    padding-bottom: 56.25%;
+    height: 0;
+    overflow: hidden;
+    &__link {
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        top: 0;
+        left: 0;
+        z-index: 10;
+        background: $blue;
+    }
+}
+
+.video-embed iframe,
+.video-embed object,
+.video-embed embed {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+// 5.1 Gradient
+.overlay {
+    @include display_full;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    &__black {
+        @include bg-gradient-black;
+    }
+    &__halfblack {
+        @include bg-black;
+    }
+    &__radial--black {
+        @include bg-radial-black;
+    }
+}
+
+// 5.2 Parallax - Position
+.parallax {
+    width: 100%;
+    position: absolute;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    top: 0;
+    background-attachment: fixed;
+}
+
+.scrollSlide {
+    left: -100% !important;
+    top: 0
+}
+
+.scrollDown {
+    left: 0;
+    top: 100% !important
+}
+
+.moveLeft {
+    left: -100% !important
+}
+
+.pushRight {
+    left: 0 !important
+}
+
+.moveRight {
+    left: 100% !important
+}
+
+.moveDown {
+    top: 0 !important
+}
+
+.moveUp {
+    top: -100% !important
+}
+
+.display {
+    opacity: 1 !important;
+}
+
+.hide {
+    opacity: 0 !important;
+}

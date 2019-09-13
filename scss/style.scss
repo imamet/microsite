@@ -1,0 +1,27 @@
+/*=================================================================
+    Company      : Digital Advertising Division - Kompas.com
+    Document     : CSS
+    Author       : Muhamad Ambrikom Tidar
+    Project Name : Microsite Customaxi Yamaha | Gridoto.com
+    Year		 : 2018
+=================================================================*/
+
+// base sass, mixin + variable
+@import 'base';
+
+// global
+@import 'reset';
+@import 'grid';
+@import 'fontface';
+@import 'utilities';
+@import 'preloader';
+
+// main
+@import 'main';
+@import 'animation';
+
+// header
+@import 'header';
+
+// footer
+@import 'footer';
